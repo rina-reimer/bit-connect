@@ -1,4 +1,11 @@
+package bit.connect;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
+ * 
 * Student is the base class that controls all the information 
 * contained within each user's profile. 
 * <p>
@@ -21,12 +28,6 @@
 * @version     %I%, %G%
 * @since       1.0
 */
-package bit.connect;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 public class Student {
   private String last;               // Last name of the student
   private String first;              // First name of the student
@@ -57,7 +58,6 @@ public class Student {
    * @param realMajor the official major of the student
    * @throws IllegalArgumentException if the official major is not
    *                                  a major at UW, typically will not be called
-   * @see Cloud.add when the student is added to the list of enrolled users
   */
   public Student(String lastName, String firstName, String netID, 
                 String[] pronouns, String realMajor) {
@@ -113,7 +113,6 @@ public class Student {
    * 
    * @param student the student to compare filters with
    * @return true if the student matches the filters, false otherwise
-   * @see Filter.compareTo
    */
   public boolean matchFilters(Student student) {
     return this.filters.compareTo(student) == 0 && 
@@ -239,6 +238,82 @@ public class Student {
   public LinkedList<Student> getPastMatches() { return pastMatches; }
 
   // setter methods
-  // ...
+  /**
+   * Sets the last name of the student.
+   * 
+   * @param last the last name of the student
+   */
+  public void setLast(String last) { this.last = last; }
+
+  /**
+   * Sets the first name of the student.
+   * 
+   * @param first the first name of the student
+   */
+  public void setFirst(String first) { this.first = first; }
+
+  /**
+   * Sets the ID of the student.
+   * 
+   * @param id the ID of the student
+   */
+  public void setId(String id) { this.id = id; }
+
+  /**
+   * Sets the pronouns of the student.
+   * 
+   * @param pronouns the pronouns of the student
+   */
+  public void setPronouns(String[] pronouns) { this.pronouns = pronouns; }
+
+  /**
+   * Sets the real major of the student.
+   * 
+   * @param realMajor the real major of the student
+   */
+  public void setRealMajor(String realMajor) { this.realMajor = realMajor; }
+
+  /**
+   * Sets the intended major of the student.
+   * 
+   * @param intendedMajor the intended major of the student
+   */
+  public void setIntendedMajor(String intendedMajor) { this.intendedMajor = intendedMajor; }
+
+  /**
+   * Sets the interests of the student.
+   * 
+   * @param interests the interests of the student
+   */
+  public void setInterests(List<String> interests) { this.interests = interests; }
+
+  /**
+   * Sets the current location of the student.
+   * 
+   * @param currLoc the current location of the student
+   */
+  public void setCurrLoc(double[] currLoc) { this.currLoc = currLoc; }
+
+  /**
+   * Sets whether the search mode is on for the student.
+   * 
+   * @param searchModeOn true if the search mode is on, false otherwise
+   */
+  public void setSearchModeOn(boolean searchModeOn) { this.searchModeOn = searchModeOn; }
+
+  /**
+   * Sets the filters of the student.
+   * 
+   * @param filters the filters of the student
+   */
+  public void setFilters(Filter filters) { this.filters = filters; }
+
+  /**
+   * Sets the past matches of the student.
+   * 
+   * @param pastMatches the past matches of the student
+   */
+  public void setPastMatches(LinkedList<Student> pastMatches) { this.pastMatches = pastMatches; }
+  
 }
 
