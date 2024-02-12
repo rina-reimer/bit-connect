@@ -1,8 +1,7 @@
-package javafiles;
+package bit.connect;
 
 import java.util.ArrayList;
 import java.util.List;
-import javafiles.Student;
 
 public class Filter {
   private List<String[]> pronouns;
@@ -19,6 +18,11 @@ public class Filter {
     this.interests = new ArrayList<>();
   }
 
+  
+  /** 
+   * @param student
+   * @return int
+   */
   public int compareTo(Student student) {
     if (this.pronouns.contains(student.getPronouns()) &&
       this.realMajor.contains(student.getRealMajor()) &&

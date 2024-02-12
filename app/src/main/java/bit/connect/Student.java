@@ -1,12 +1,34 @@
-package javafiles;
+/**
+* Student is the base class that controls all the information 
+* contained within each user's profile. 
+* <p>
+* A Graphics object encapsulates the state information needed
+* for each user that is utilizing the app whether or not they
+* are active. This state information includes the user's:
+* <ul>
+* <li>First and last name
+* <li>NetID or username
+* <li>Preffered Pronouns
+* <li>Official Major and Intended Major
+* <li>Interests and intended career path
+* <li>Current location (only used when user is active)
+* <li>Active state
+* <li>Filters to match with other users
+* <li>Past matches
+* </ul>
+* <p>
+* @author      Rina Reimer
+* @version     %I%, %G%
+* @since       1.0
+*/
+package bit.connect;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import javafiles.Cloud;
 
 public class Student {
-  private String last;
+  private String last; // holds the last name for 
   private String first;
   private String id;
   private String[] pronouns;
@@ -19,8 +41,9 @@ public class Student {
   private Filter filters;
   private LinkedList<Student> pastMatches;
 
-
-  // default constructor
+  /** 
+  * Class constructor.
+  */
   public Student(String lastName, String firstName, String netID, String[] pronouns, String realMajor) {
     this.last = lastName;
     this.first = firstName;
@@ -28,8 +51,8 @@ public class Student {
     this.pronouns = pronouns; 
 
     // majors 
-    if (!Cloud.validInterests.contains(realMajor)) {
-      throw new IllegalArgumentException("Official Major input is not a major at UW.");
+    if (!Cloud.validMajors.contains(realMajor)) {
+      throw new IllegalArgumentException(Cloud.validMajors.toString());
     }
     this.realMajor = realMajor;
     this.intendedMajor = "";
@@ -44,7 +67,12 @@ public class Student {
     Cloud.addStudent(this);
   }
 
-  // takes inputs and adds them to the constructor
+  
+  /** 
+   * takes inputs and adds them to the constructor
+   * @param intendedMajor
+   * @param interests
+   */ 
   public void processCreation(String intendedMajor, List<String> interests) {
 
     if (!Cloud.validInterests.contains(intendedMajor)) {
@@ -73,6 +101,7 @@ public class Student {
       // TODO: implement a tracking method
       this.currLoc[0] = 100.0;
       this.currLoc[1] = 100.0;
+      this.searchModeOn = true;
     }
   }
 
