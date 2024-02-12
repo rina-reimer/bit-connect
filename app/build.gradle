@@ -10,9 +10,10 @@
 plugins {
     id 'application'
     id 'java'
+    id 'maven-publish'
 }
 
-group = 'bit.connect'
+group = 'com.rina-reimer.bit-connect'
 version = '1.0.0'
 
 repositories {
@@ -43,4 +44,25 @@ tasks.named('test') {
 
 task myJavadocs(type: Javadoc) {
   source = sourceSets.main.allJava
+}
+
+publishing {
+    repositories {
+        maven {
+            name = "Github"
+            url = uri("https://maven.pkg.github.com/rina-reimer/bit-connect")
+            credentials {
+                username = findProperty("rina-reimer")
+                password = findProperty("github.token")
+            }
+        }
+    }
+    publications {
+        register("jar", MavenPublication) {
+            from(components["java"])
+            pom {
+                url.set("https://github.com/rina-reimer/bit-connect.git")
+            }
+        }
+    }
 }
