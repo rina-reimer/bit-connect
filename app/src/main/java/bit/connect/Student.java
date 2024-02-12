@@ -28,23 +28,39 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Student {
-  private String last; // holds the last name for 
-  private String first;
-  private String id;
-  private String[] pronouns;
-  private String realMajor;
-  private String intendedMajor;
-  private List<String> interests; 
-  private List<String> careerPath;
-  private double[] currLoc;
-  private boolean searchModeOn;
-  private Filter filters;
-  private LinkedList<Student> pastMatches;
+  private String last;               // Last name of the student
+  private String first;              // First name of the student
+  private String id;                 // ID of the student, typically the NetID
+  private String[] pronouns;         // Pronouns of the student, written as [nominative, accusative, possessive]
+  private String realMajor;          // Official major of the student
+  private String intendedMajor;      // Intended major of the student
+  private List<String> interests;    // Interests of the student
+  private double[] currLoc;          // Current location of the student [latitude, longitude]
+  private boolean searchModeOn;      // Flag indicating if the student is in search mode
+  private Filter filters;            // Filters to match with other students
+  private LinkedList<Student> pastMatches;  // List of past matches for the user
 
   /** 
-  * Class constructor.
+   * Class constructor. All information should be accessed 
+   * through the UW Student database. The official major is 
+   * ensured to be a part of the official list of UW majors, 
+   * found in the official UW database. All other variables
+   * other than those inputted are initialized as empty data-
+   * types. The student is added to the list of enrolled students
+   * in the Cloud class.
+   * 
+   * @param lastName the last name of the student
+   * @param firstName the first name of the student
+   * @param netID the ID of the student, typically taken as the NetID
+   * @param pronouns the pronouns of the student, written as [nominative,
+   *                  accusative, possessive]
+   * @param realMajor the official major of the student
+   * @throws IllegalArgumentException if the official major is not
+   *                                  a major at UW, typically will not be called
+   * @see Cloud.add when the student is added to the list of enrolled users
   */
-  public Student(String lastName, String firstName, String netID, String[] pronouns, String realMajor) {
+  public Student(String lastName, String firstName, String netID, 
+                String[] pronouns, String realMajor) {
     this.last = lastName;
     this.first = firstName;
     this.id = netID;
@@ -58,7 +74,6 @@ public class Student {
     this.intendedMajor = "";
 
     this.interests = new ArrayList<>();
-    this.careerPath = new ArrayList<>();
     this.currLoc = new double[2];
     this.searchModeOn = false;
     this.filters = new Filter();
@@ -67,12 +82,15 @@ public class Student {
     Cloud.addStudent(this);
   }
 
-  
-  /** 
-   * takes inputs and adds them to the constructor
-   * @param intendedMajor
-   * @param interests
-   */ 
+  /**
+   * Takes inputs from user instead of from the official database. The
+   * intent with this is to create relationships between users based on 
+   * personality and future goals rather than their current standings.
+   * 
+   * @param intendedMajor the intended major of the student, must be a major at UW
+   * @param interests the interests of the student, taken from a pre-set list
+   * @throws IllegalArgumentException if the intended major is not a major at UW
+   */
   public void processCreation(String intendedMajor, List<String> interests) {
 
     if (!Cloud.validInterests.contains(intendedMajor)) {
@@ -88,10 +106,25 @@ public class Student {
     }
   }
 
+  /**
+   * Checks if the student matches the filters of another student. Both users 
+   * must match the other's filters exactly. If even one does not match the other, 
+   * the filters do not match.
+   * 
+   * @param student the student to compare filters with
+   * @return true if the student matches the filters, false otherwise
+   * @see Filter.compareTo
+   */
   public boolean matchFilters(Student student) {
-    return this.filters.compareTo(student) == 0 && student.getFilters().compareTo(this) == 0;
+    return this.filters.compareTo(student) == 0 && 
+           student.getFilters().compareTo(this) == 0;
   }
 
+  /**
+   * Toggles the search mode of the student. When the student is 
+   * not actively searching for other users, the coordinates are set to
+   * (0.0, 0.0)
+   */
   public void turnSearchMode() {
     if (this.searchModeOn) {
       this.currLoc[0] = 0.0;
@@ -105,42 +138,107 @@ public class Student {
     }
   }
 
+  /**
+   * Calculates the distance between the student and another student.
+   * 
+   * @param student the student to calculate the distance to
+   * @return the distance between the students
+   */
   public double distance(Student student) {
     double x = this.currLoc[0] - student.getCurrLoc()[0];
     double y = this.currLoc[1] - student.getCurrLoc()[1];
     return Math.sqrt(x * x + y * y);
   }
 
+  /**
+   * Returns a string representation of the student.
+   * 
+   * @return a string representation of the student
+   */
   public String toString() {
     return first + " " + last + " (" + id + "): " + realMajor + " Major";
   }
 
   // getter methods
-  public String getLast() { return last; }
-  public String getFirst() { return first; }
-  public String getId() { return id; }
-  public String[] getPronouns() { return pronouns; }
-  public String getRealMajor() { return realMajor; }
-  public String getIntendedMajor() { return intendedMajor; }
-  public List<String> getInterests() { return interests; }
-  public List<String> getCareerPath() { return careerPath; }
-  public double[] getCurrLoc() { return currLoc; }
-  public boolean isSearchModeOn() { return searchModeOn; }
-  public Filter getFilters() { return filters; }
-  public LinkedList<Student> getPastMatches() { return pastMatches; }
-  // setter methods
-  public void setLast(String last) { this.last = last; }
-  public void setFirst(String first) { this.first = first; }
-  public void setId(String id) { this.id = id; }
-  public void setPronouns(String[] pronouns) { this.pronouns = pronouns; }
-  public void setRealMajor(String realMajor) { this.realMajor = realMajor; }
-  public void setIntendedMajor(String intendedMajor) { this.intendedMajor = intendedMajor; }
-  public void setInterests(List<String> interests) { this.interests = interests; }
-  public void setCareerPath(List<String> careerPath) { this.careerPath = careerPath; }
-  public void setCurrLoc(double[] currLoc) { this.currLoc = currLoc; }
-  public void setSearchModeOn(boolean searchModeOn) { this.searchModeOn = searchModeOn; }
-  public void setFilters(Filter filters) { this.filters = filters; }
-  public void setPastMatches(LinkedList<Student> pastMatches) { this.pastMatches = pastMatches; }
 
+  /**
+   * Returns the last name of the student.
+   * 
+   * @return the last name of the student
+   */
+  public String getLast() { return last; }
+
+  /**
+   * Returns the first name of the student.
+   * 
+   * @return the first name of the student
+   */
+  public String getFirst() { return first; }
+
+  /**
+   * Returns the ID of the student.
+   * 
+   * @return the ID of the student
+   */
+  public String getId() { return id; }
+
+  /**
+   * Returns the pronouns of the student.
+   * 
+   * @return the pronouns of the student
+   */
+  public String[] getPronouns() { return pronouns; }
+
+  /**
+   * Returns the real major of the student.
+   * 
+   * @return the real major of the student
+   */
+  public String getRealMajor() { return realMajor; }
+
+  /**
+   * Returns the intended major of the student.
+   * 
+   * @return the intended major of the student
+   */
+  public String getIntendedMajor() { return intendedMajor; }
+
+  /**
+   * Returns the interests of the student.
+   * 
+   * @return the interests of the student
+   */
+  public List<String> getInterests() { return interests; }
+  
+  /**
+   * Returns the current location of the student.
+   * 
+   * @return the current location of the student
+   */
+  public double[] getCurrLoc() { return currLoc; }
+
+  /**
+   * Returns whether the search mode is on for the student.
+   * 
+   * @return true if the search mode is on, false otherwise
+   */
+  public boolean isSearchModeOn() { return searchModeOn; }
+
+  /**
+   * Returns the filters of the student.
+   * 
+   * @return the filters of the student
+   */
+  public Filter getFilters() { return filters; }
+
+  /**
+   * Returns the past matches of the student.
+   * 
+   * @return the past matches of the student
+   */
+  public LinkedList<Student> getPastMatches() { return pastMatches; }
+
+  // setter methods
+  // ...
 }
 
