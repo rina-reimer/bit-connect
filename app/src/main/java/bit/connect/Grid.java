@@ -1,4 +1,4 @@
-package javafiles;
+package bit.connect;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -43,6 +43,11 @@ public class Grid {
     }
   }
 
+  
+  /** 
+   * @param origin
+   * @param added
+   */
   private void insert(Student origin, Student added) {
     double dist = origin.distance(added);
     LinkedList<Student> lst = this.userMatch.get(origin);
