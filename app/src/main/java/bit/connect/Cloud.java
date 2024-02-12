@@ -7,10 +7,18 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The Cloud class represents a cloud storage system for a student networking application.
+ * It provides methods to manage student data and perform operations on the data.
+ */
 public class Cloud {
+  // instantiates the valid majors list
   public static List<String> validMajors = new ArrayList<>();
+  // instantiates the valid majors list
   public static List<String> validInterests = new ArrayList<>();
+  // instantiates the valid majors list
   public static List<Student> users = new ArrayList<>();
+  // instantiates the valid majors list
   public static List<Student> activeUsers = new ArrayList<>();
 
   static {
@@ -25,12 +33,16 @@ public class Cloud {
 
   
   /** 
-   * @param student
+   * Adds a student to the list of users.
+   * @param student the student to be added
    */
   public static void addStudent(Student student) {
     users.add(student);
   }
 
+  /**
+   * Refreshes the list of active users based on their search mode status.
+   */
   public static void refresh() {
     activeUsers.clear();
     for (Student s : users) {
@@ -40,6 +52,10 @@ public class Cloud {
     }
   }
 
+  /**
+   * Generates a string representation of the student data in the cloud.
+   * @return a string representation of the student data
+   */
   public static String outputString() {
     String result = "";
     for (Student s : users) {
@@ -52,5 +68,4 @@ public class Cloud {
     return result;
   }
 }
-
 
