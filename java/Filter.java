@@ -1,7 +1,8 @@
-package java;
+package javafiles;
 
 import java.util.ArrayList;
 import java.util.List;
+import javafiles.Student;
 
 public class Filter {
   private List<String[]> pronouns;

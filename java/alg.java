@@ -1,9 +1,6 @@
-package java;
-import java.Student;
+package javafiles;
 import java.util.HashSet;
 import java.util.Set;
-import java.Grid;
-import java.Filter;
 
 public class alg {
   private static Set<Grid> grids = new HashSet<>();

@@ -1,8 +1,9 @@
-package java;
+package javafiles;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import javafiles.Cloud;
 
 public class Student {
   private String last;
@@ -73,6 +74,12 @@ public class Student {
       this.currLoc[0] = 100.0;
       this.currLoc[1] = 100.0;
     }
+  }
+
+  public double distance(Student student) {
+    double x = this.currLoc[0] - student.getCurrLoc()[0];
+    double y = this.currLoc[1] - student.getCurrLoc()[1];
+    return Math.sqrt(x * x + y * y);
   }
 
   public String toString() {
