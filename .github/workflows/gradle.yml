@@ -27,14 +27,6 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Deploy JavaDoc 🚀
-      uses: MathieuSoysal/Javadoc-publisher.yml@v2.4.0 
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        javadoc-branch: javadoc
-        java-version: '17'
-        target-folder: javadoc 
-        project: gradle
 
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
