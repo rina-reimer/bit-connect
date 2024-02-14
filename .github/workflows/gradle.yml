@@ -40,17 +40,6 @@ jobs:
 
     - name: Publish with Gradle
       run: gradle publish
-
-    - name: Deploy JavaDoc 🚀
-      uses: MathieuSoysal/Javadoc-publisher.yml@v2.4.0
-      with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        javadoc-branch: javadoc
-        java-distribution: temurin
-        java-version: 17
-        target-folder: javadoc 
-        project: gradle
-        
     
 
   dependency-submission:
