@@ -38,20 +38,20 @@ jobs:
     - name: Build with Gradle 8.5
       run: gradle build
 
-    - name: Create Javadoc directory
-      run: mkdir -p /home/runner/work/bit-connect/bit-connect/build/docs/javadoc
+    - name: Publish with Gradle
+      run: gradle publish
 
     - name: Deploy JavaDoc 🚀
       uses: MathieuSoysal/Javadoc-publisher.yml@v2.4.0
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         javadoc-branch: javadoc
+        java-distribution: temurin
         java-version: 17
         target-folder: javadoc 
         project: gradle
         
-    - name: Publish with Gradle
-      run: gradle publish
+    
 
   dependency-submission:
 
