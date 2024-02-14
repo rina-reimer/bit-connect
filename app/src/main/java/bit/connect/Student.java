@@ -23,7 +23,6 @@ import java.util.List;
 * <li>Filters to match with other users
 * <li>Past matches
 * </ul>
-* <p>
 * @author      Rina Reimer
 * @version     %I%, %G%
 * @since       1.0

@@ -21,11 +21,11 @@ public class Grid {
   /**
    * Class constructor.
    * 
-   * @param id
-   * @param lowerLat
-   * @param higherLat
-   * @param lowerLong
-   * @param higherLong
+   * @param id defining number for each grid section
+   * @param lowerLat lower bound for latitude
+   * @param higherLat higher bound for latitude
+   * @param lowerLong lower bound for longitude
+   * @param higherLong higher bound for longitude
    */
   public Grid(int id, double lowerLat, double higherLat, double lowerLong, double higherLong) {
     this.id = id;
@@ -83,6 +83,11 @@ public class Grid {
     lst.add(index, added);
   }
 
+  /**
+   * Returns the ID of the grid.
+   *
+   * @return the ID of the grid
+   */
   public int getId() { return id; }
 
 }

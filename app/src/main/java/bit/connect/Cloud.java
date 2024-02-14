@@ -11,14 +11,28 @@ import java.util.List;
  * The Cloud class represents a cloud storage system for a student networking application.
  * It provides methods to manage student data and perform operations on the data.
  */
+/**
+ * Represents a cloud storage for student data.
+ */
 public class Cloud {
-  // instantiates the valid majors list
+  /**
+   * List of valid majors.
+   */
   public static List<String> validMajors = new ArrayList<>();
-  // instantiates the valid majors list
+
+  /**
+   * List of valid interests.
+   */
   public static List<String> validInterests = new ArrayList<>();
-  // instantiates the valid majors list
+
+  /**
+   * List of all student users.
+   */
   public static List<Student> users = new ArrayList<>();
-  // instantiates the valid majors list
+
+  /**
+   * List of active student users.
+   */
   public static List<Student> activeUsers = new ArrayList<>();
 
   static {
