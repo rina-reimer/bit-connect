@@ -10,8 +10,6 @@ plugins {
     id 'application'
     id 'java'
     id 'maven-publish'
-    id 'signing'
-    //id("com.gradle.enterprise") version("3.16.1")
 }
 
 group = 'com.rina-reimer.bit.connect'
@@ -50,14 +48,6 @@ task myJavadocs(type: Javadoc) {
 
 publishing {
   repositories {
-    maven {
-      name = "OSSRH"
-      url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
-      credentials {
-        username = System.getenv("MAVEN_USERNAME")
-        password = System.getenv("MAVEN_PASSWORD")
-      }
-    }
     maven {
       name = "GitHubPackages"
       url = "https://maven.pkg.github.com/rina-reimer/bit-connect"
