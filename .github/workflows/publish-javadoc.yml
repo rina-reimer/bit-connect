@@ -11,13 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # if you have a protection rule on your repository, you'll need to give write permission to the workflow.
+      
     steps:
       - name: Deploy JavaDoc 🚀
-        uses: MathieuSoysal/Javadoc-publisher.yml@v2.4.0
+        uses: MathieuSoysal/Javadoc-publisher.yml@v2.5.0
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          javadoc-branch: app/build/docs/javadoc
-          java-version: 17
-          target-folder: app/build/docs/javadoc
-          project: gradle
           javadoc-source-folder: app/build/docs/javadoc
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          javadoc-branch: javadoc
+          java-version: 17
+          target-folder: javadoc
+          project: gradle
+          
