@@ -18,8 +18,8 @@ jobs:
         with:
           javadoc-source-folder: app/build/docs/javadoc
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          javadoc-branch: app/build/docs/javadoc
+          javadoc-branch: javadoc
           java-version: 17
-          target-folder: javadoc
+          target-folder: docs
           project: gradle
           
