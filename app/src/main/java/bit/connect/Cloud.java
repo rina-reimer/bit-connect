@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class Cloud {
   /**
-   * List of valid majors, taken from a pre-defined list.
+   * THIS HAS BEEN CHANGED.
    */
   public static List<String> validMajors = new ArrayList<>();
 
