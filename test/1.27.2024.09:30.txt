@@ -1,3 +1,0 @@
-"Name, id, lat, long"
-Rina, 001, 4567, 1234
-Lily, 002, 764, 1245
