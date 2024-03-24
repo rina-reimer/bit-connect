@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		794711062BAFCB12008DE30D /* BitConnectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711052BAFCB12008DE30D /* BitConnectApp.swift */; };
+		794711082BAFCB12008DE30D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711072BAFCB12008DE30D /* MainView.swift */; };
+		7947110A2BAFCB14008DE30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 794711092BAFCB14008DE30D /* Assets.xcassets */; };
+		7947110D2BAFCB14008DE30D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7947110C2BAFCB14008DE30D /* Preview Assets.xcassets */; };
+		794711172BAFCB14008DE30D /* BitConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711162BAFCB14008DE30D /* BitConnectTests.swift */; };
+		794711212BAFCB14008DE30D /* BitConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711202BAFCB14008DE30D /* BitConnectUITests.swift */; };
+		794711232BAFCB14008DE30D /* BitConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711222BAFCB14008DE30D /* BitConnectUITestsLaunchTests.swift */; };
+		794711302BAFCB3E008DE30D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947112F2BAFCB3E008DE30D /* Extensions.swift */; };
+		794711362BAFCBF1008DE30D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711352BAFCBF1008DE30D /* User.swift */; };
+		794711382BAFCC0D008DE30D /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711372BAFCC0D008DE30D /* Connection.swift */; };
+		7947113B2BAFCC35008DE30D /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947113A2BAFCC35008DE30D /* MainViewViewModel.swift */; };
+		7947113E2BAFCC75008DE30D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7947113D2BAFCC75008DE30D /* FirebaseAuth */; };
+		794711402BAFCC75008DE30D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7947113F2BAFCC75008DE30D /* FirebaseFirestore */; };
+		794711422BAFCC75008DE30D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 794711412BAFCC75008DE30D /* FirebaseFirestoreSwift */; };
+		794711442BAFCCB2008DE30D /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711432BAFCCB2008DE30D /* ProfileViewViewModel.swift */; };
+		794711462BAFCCC2008DE30D /* MessagesViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711452BAFCCC2008DE30D /* MessagesViewViewModel.swift */; };
+		794711482BAFCCD4008DE30D /* FilterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711472BAFCCD4008DE30D /* FilterViewViewModel.swift */; };
+		7947114A2BAFCD14008DE30D /* ConnectionsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711492BAFCD14008DE30D /* ConnectionsViewViewModel.swift */; };
+		7947114C2BAFCD1F008DE30D /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947114B2BAFCD1F008DE30D /* LoginViewViewModel.swift */; };
+		7947114E2BAFCD2A008DE30D /* SSOLoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947114D2BAFCD2A008DE30D /* SSOLoginViewViewModel.swift */; };
+		794711502BAFCD33008DE30D /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947114F2BAFCD33008DE30D /* RegisterViewViewModel.swift */; };
+		794711522BAFCD3F008DE30D /* PublicConnectionViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711512BAFCD3F008DE30D /* PublicConnectionViewViewModel.swift */; };
+		794711572BAFCDC1008DE30D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711562BAFCDC1008DE30D /* ProfileView.swift */; };
+		794711592BAFCDD1008DE30D /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711582BAFCDD1008DE30D /* MessagesView.swift */; };
+		7947115B2BAFCDDD008DE30D /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947115A2BAFCDDD008DE30D /* FilterView.swift */; };
+		7947115D2BAFCDEA008DE30D /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947115C2BAFCDEA008DE30D /* ConnectionsView.swift */; };
+		7947115F2BAFCEA6008DE30D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947115E2BAFCEA6008DE30D /* LoginView.swift */; };
+		794711612BAFCEB7008DE30D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711602BAFCEB7008DE30D /* HeaderView.swift */; };
+		794711632BAFCEDC008DE30D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711622BAFCEDC008DE30D /* RegisterView.swift */; };
+		794711652BAFCEEB008DE30D /* SSOLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711642BAFCEEB008DE30D /* SSOLoginView.swift */; };
+		794711672BAFCEF9008DE30D /* PublicConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711662BAFCEF9008DE30D /* PublicConnectionView.swift */; };
+		794711692BAFCF03008DE30D /* BCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711682BAFCF03008DE30D /* BCButton.swift */; };
+		7947116B2BAFCFD0008DE30D /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 7947116A2BAFCFCF008DE30D /* GoogleService-Info (1).plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		794711132BAFCB14008DE30D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 794710FA2BAFCB12008DE30D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 794711012BAFCB12008DE30D;
+			remoteInfo = BitConnect;
+		};
+		7947111D2BAFCB14008DE30D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 794710FA2BAFCB12008DE30D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 794711012BAFCB12008DE30D;
+			remoteInfo = BitConnect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		794711022BAFCB12008DE30D /* BitConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		794711052BAFCB12008DE30D /* BitConnectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitConnectApp.swift; sourceTree = "<group>"; };
+		794711072BAFCB12008DE30D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		794711092BAFCB14008DE30D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7947110C2BAFCB14008DE30D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		794711122BAFCB14008DE30D /* BitConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		794711162BAFCB14008DE30D /* BitConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitConnectTests.swift; sourceTree = "<group>"; };
+		7947111C2BAFCB14008DE30D /* BitConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		794711202BAFCB14008DE30D /* BitConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitConnectUITests.swift; sourceTree = "<group>"; };
+		794711222BAFCB14008DE30D /* BitConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7947112F2BAFCB3E008DE30D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		794711352BAFCBF1008DE30D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		794711372BAFCC0D008DE30D /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		7947113A2BAFCC35008DE30D /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		794711432BAFCCB2008DE30D /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
+		794711452BAFCCC2008DE30D /* MessagesViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewViewModel.swift; sourceTree = "<group>"; };
+		794711472BAFCCD4008DE30D /* FilterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewViewModel.swift; sourceTree = "<group>"; };
+		794711492BAFCD14008DE30D /* ConnectionsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsViewViewModel.swift; sourceTree = "<group>"; };
+		7947114B2BAFCD1F008DE30D /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		7947114D2BAFCD2A008DE30D /* SSOLoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOLoginViewViewModel.swift; sourceTree = "<group>"; };
+		7947114F2BAFCD33008DE30D /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
+		794711512BAFCD3F008DE30D /* PublicConnectionViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicConnectionViewViewModel.swift; sourceTree = "<group>"; };
+		794711562BAFCDC1008DE30D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		794711582BAFCDD1008DE30D /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		7947115A2BAFCDDD008DE30D /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		7947115C2BAFCDEA008DE30D /* ConnectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
+		7947115E2BAFCEA6008DE30D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		794711602BAFCEB7008DE30D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		794711622BAFCEDC008DE30D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		794711642BAFCEEB008DE30D /* SSOLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOLoginView.swift; sourceTree = "<group>"; };
+		794711662BAFCEF9008DE30D /* PublicConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicConnectionView.swift; sourceTree = "<group>"; };
+		794711682BAFCF03008DE30D /* BCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCButton.swift; sourceTree = "<group>"; };
+		7947116A2BAFCFCF008DE30D /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		794710FF2BAFCB12008DE30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7947113E2BAFCC75008DE30D /* FirebaseAuth in Frameworks */,
+				794711402BAFCC75008DE30D /* FirebaseFirestore in Frameworks */,
+				794711422BAFCC75008DE30D /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7947110F2BAFCB14008DE30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		794711192BAFCB14008DE30D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		794710F92BAFCB12008DE30D = {
+			isa = PBXGroup;
+			children = (
+				794711042BAFCB12008DE30D /* BitConnect */,
+				794711152BAFCB14008DE30D /* BitConnectTests */,
+				7947111F2BAFCB14008DE30D /* BitConnectUITests */,
+				794711032BAFCB12008DE30D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		794711032BAFCB12008DE30D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				794711022BAFCB12008DE30D /* BitConnect.app */,
+				794711122BAFCB14008DE30D /* BitConnectTests.xctest */,
+				7947111C2BAFCB14008DE30D /* BitConnectUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		794711042BAFCB12008DE30D /* BitConnect */ = {
+			isa = PBXGroup;
+			children = (
+				794711532BAFCD7A008DE30D /* View */,
+				794711392BAFCC24008DE30D /* ViewModels */,
+				794711342BAFCBE6008DE30D /* Models */,
+				794711312BAFCB47008DE30D /* Other */,
+				7947110B2BAFCB14008DE30D /* Preview Content */,
+			);
+			path = BitConnect;
+			sourceTree = "<group>";
+		};
+		7947110B2BAFCB14008DE30D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7947110C2BAFCB14008DE30D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		794711152BAFCB14008DE30D /* BitConnectTests */ = {
+			isa = PBXGroup;
+			children = (
+				794711162BAFCB14008DE30D /* BitConnectTests.swift */,
+			);
+			path = BitConnectTests;
+			sourceTree = "<group>";
+		};
+		7947111F2BAFCB14008DE30D /* BitConnectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				794711202BAFCB14008DE30D /* BitConnectUITests.swift */,
+				794711222BAFCB14008DE30D /* BitConnectUITestsLaunchTests.swift */,
+			);
+			path = BitConnectUITests;
+			sourceTree = "<group>";
+		};
+		794711312BAFCB47008DE30D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				7947116A2BAFCFCF008DE30D /* GoogleService-Info (1).plist */,
+				794711092BAFCB14008DE30D /* Assets.xcassets */,
+				7947112F2BAFCB3E008DE30D /* Extensions.swift */,
+				794711052BAFCB12008DE30D /* BitConnectApp.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		794711342BAFCBE6008DE30D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				794711352BAFCBF1008DE30D /* User.swift */,
+				794711372BAFCC0D008DE30D /* Connection.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		794711392BAFCC24008DE30D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7947113A2BAFCC35008DE30D /* MainViewViewModel.swift */,
+				794711432BAFCCB2008DE30D /* ProfileViewViewModel.swift */,
+				794711452BAFCCC2008DE30D /* MessagesViewViewModel.swift */,
+				794711472BAFCCD4008DE30D /* FilterViewViewModel.swift */,
+				794711492BAFCD14008DE30D /* ConnectionsViewViewModel.swift */,
+				7947114B2BAFCD1F008DE30D /* LoginViewViewModel.swift */,
+				7947114D2BAFCD2A008DE30D /* SSOLoginViewViewModel.swift */,
+				7947114F2BAFCD33008DE30D /* RegisterViewViewModel.swift */,
+				794711512BAFCD3F008DE30D /* PublicConnectionViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		794711532BAFCD7A008DE30D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				794711072BAFCB12008DE30D /* MainView.swift */,
+				794711562BAFCDC1008DE30D /* ProfileView.swift */,
+				794711582BAFCDD1008DE30D /* MessagesView.swift */,
+				7947115A2BAFCDDD008DE30D /* FilterView.swift */,
+				7947115C2BAFCDEA008DE30D /* ConnectionsView.swift */,
+				7947115E2BAFCEA6008DE30D /* LoginView.swift */,
+				794711602BAFCEB7008DE30D /* HeaderView.swift */,
+				794711622BAFCEDC008DE30D /* RegisterView.swift */,
+				794711642BAFCEEB008DE30D /* SSOLoginView.swift */,
+				794711662BAFCEF9008DE30D /* PublicConnectionView.swift */,
+				794711682BAFCF03008DE30D /* BCButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		794711012BAFCB12008DE30D /* BitConnect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 794711262BAFCB14008DE30D /* Build configuration list for PBXNativeTarget "BitConnect" */;
+			buildPhases = (
+				794710FE2BAFCB12008DE30D /* Sources */,
+				794710FF2BAFCB12008DE30D /* Frameworks */,
+				794711002BAFCB12008DE30D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitConnect;
+			packageProductDependencies = (
+				7947113D2BAFCC75008DE30D /* FirebaseAuth */,
+				7947113F2BAFCC75008DE30D /* FirebaseFirestore */,
+				794711412BAFCC75008DE30D /* FirebaseFirestoreSwift */,
+			);
+			productName = BitConnect;
+			productReference = 794711022BAFCB12008DE30D /* BitConnect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		794711112BAFCB14008DE30D /* BitConnectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 794711292BAFCB14008DE30D /* Build configuration list for PBXNativeTarget "BitConnectTests" */;
+			buildPhases = (
+				7947110E2BAFCB14008DE30D /* Sources */,
+				7947110F2BAFCB14008DE30D /* Frameworks */,
+				794711102BAFCB14008DE30D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				794711142BAFCB14008DE30D /* PBXTargetDependency */,
+			);
+			name = BitConnectTests;
+			productName = BitConnectTests;
+			productReference = 794711122BAFCB14008DE30D /* BitConnectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7947111B2BAFCB14008DE30D /* BitConnectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7947112C2BAFCB14008DE30D /* Build configuration list for PBXNativeTarget "BitConnectUITests" */;
+			buildPhases = (
+				794711182BAFCB14008DE30D /* Sources */,
+				794711192BAFCB14008DE30D /* Frameworks */,
+				7947111A2BAFCB14008DE30D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7947111E2BAFCB14008DE30D /* PBXTargetDependency */,
+			);
+			name = BitConnectUITests;
+			productName = BitConnectUITests;
+			productReference = 7947111C2BAFCB14008DE30D /* BitConnectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		794710FA2BAFCB12008DE30D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					794711012BAFCB12008DE30D = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					794711112BAFCB14008DE30D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 794711012BAFCB12008DE30D;
+					};
+					7947111B2BAFCB14008DE30D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 794711012BAFCB12008DE30D;
+					};
+				};
+			};
+			buildConfigurationList = 794710FD2BAFCB12008DE30D /* Build configuration list for PBXProject "BitConnect" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 794710F92BAFCB12008DE30D;
+			packageReferences = (
+				7947113C2BAFCC75008DE30D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 794711032BAFCB12008DE30D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				794711012BAFCB12008DE30D /* BitConnect */,
+				794711112BAFCB14008DE30D /* BitConnectTests */,
+				7947111B2BAFCB14008DE30D /* BitConnectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		794711002BAFCB12008DE30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7947110D2BAFCB14008DE30D /* Preview Assets.xcassets in Resources */,
+				7947116B2BAFCFD0008DE30D /* GoogleService-Info (1).plist in Resources */,
+				7947110A2BAFCB14008DE30D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		794711102BAFCB14008DE30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7947111A2BAFCB14008DE30D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		794710FE2BAFCB12008DE30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794711592BAFCDD1008DE30D /* MessagesView.swift in Sources */,
+				7947114C2BAFCD1F008DE30D /* LoginViewViewModel.swift in Sources */,
+				794711692BAFCF03008DE30D /* BCButton.swift in Sources */,
+				794711652BAFCEEB008DE30D /* SSOLoginView.swift in Sources */,
+				794711362BAFCBF1008DE30D /* User.swift in Sources */,
+				794711632BAFCEDC008DE30D /* RegisterView.swift in Sources */,
+				794711082BAFCB12008DE30D /* MainView.swift in Sources */,
+				7947114E2BAFCD2A008DE30D /* SSOLoginViewViewModel.swift in Sources */,
+				7947113B2BAFCC35008DE30D /* MainViewViewModel.swift in Sources */,
+				794711382BAFCC0D008DE30D /* Connection.swift in Sources */,
+				794711522BAFCD3F008DE30D /* PublicConnectionViewViewModel.swift in Sources */,
+				794711572BAFCDC1008DE30D /* ProfileView.swift in Sources */,
+				794711442BAFCCB2008DE30D /* ProfileViewViewModel.swift in Sources */,
+				7947115B2BAFCDDD008DE30D /* FilterView.swift in Sources */,
+				794711502BAFCD33008DE30D /* RegisterViewViewModel.swift in Sources */,
+				7947115D2BAFCDEA008DE30D /* ConnectionsView.swift in Sources */,
+				7947114A2BAFCD14008DE30D /* ConnectionsViewViewModel.swift in Sources */,
+				794711462BAFCCC2008DE30D /* MessagesViewViewModel.swift in Sources */,
+				794711612BAFCEB7008DE30D /* HeaderView.swift in Sources */,
+				794711302BAFCB3E008DE30D /* Extensions.swift in Sources */,
+				7947115F2BAFCEA6008DE30D /* LoginView.swift in Sources */,
+				794711482BAFCCD4008DE30D /* FilterViewViewModel.swift in Sources */,
+				794711672BAFCEF9008DE30D /* PublicConnectionView.swift in Sources */,
+				794711062BAFCB12008DE30D /* BitConnectApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7947110E2BAFCB14008DE30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794711172BAFCB14008DE30D /* BitConnectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		794711182BAFCB14008DE30D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				794711212BAFCB14008DE30D /* BitConnectUITests.swift in Sources */,
+				794711232BAFCB14008DE30D /* BitConnectUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		794711142BAFCB14008DE30D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 794711012BAFCB12008DE30D /* BitConnect */;
+			targetProxy = 794711132BAFCB14008DE30D /* PBXContainerItemProxy */;
+		};
+		7947111E2BAFCB14008DE30D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 794711012BAFCB12008DE30D /* BitConnect */;
+			targetProxy = 7947111D2BAFCB14008DE30D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		794711242BAFCB14008DE30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		794711252BAFCB14008DE30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		794711272BAFCB14008DE30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BitConnect/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lobsterSauceProductions.BitConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		794711282BAFCB14008DE30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BitConnect/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lobsterSauceProductions.BitConnect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7947112A2BAFCB14008DE30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lobsterSauceProductions.BitConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitConnect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BitConnect";
+			};
+			name = Debug;
+		};
+		7947112B2BAFCB14008DE30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lobsterSauceProductions.BitConnectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitConnect.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BitConnect";
+			};
+			name = Release;
+		};
+		7947112D2BAFCB14008DE30D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lobsterSauceProductions.BitConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BitConnect;
+			};
+			name = Debug;
+		};
+		7947112E2BAFCB14008DE30D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = lobsterSauceProductions.BitConnectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BitConnect;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		794710FD2BAFCB12008DE30D /* Build configuration list for PBXProject "BitConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				794711242BAFCB14008DE30D /* Debug */,
+				794711252BAFCB14008DE30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		794711262BAFCB14008DE30D /* Build configuration list for PBXNativeTarget "BitConnect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				794711272BAFCB14008DE30D /* Debug */,
+				794711282BAFCB14008DE30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		794711292BAFCB14008DE30D /* Build configuration list for PBXNativeTarget "BitConnectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7947112A2BAFCB14008DE30D /* Debug */,
+				7947112B2BAFCB14008DE30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7947112C2BAFCB14008DE30D /* Build configuration list for PBXNativeTarget "BitConnectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7947112D2BAFCB14008DE30D /* Debug */,
+				7947112E2BAFCB14008DE30D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7947113C2BAFCC75008DE30D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7947113D2BAFCC75008DE30D /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7947113C2BAFCC75008DE30D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7947113F2BAFCC75008DE30D /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7947113C2BAFCC75008DE30D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		794711412BAFCC75008DE30D /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7947113C2BAFCC75008DE30D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 794710FA2BAFCB12008DE30D /* Project object */;
+}
