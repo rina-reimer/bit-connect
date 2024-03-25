@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct ConnectionsView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    @State var viewModel = ConnectionsViewViewModel()
+    @State var userId: String
+    
+    init(userId: String) {
+        self.userId = userId
     }
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                
+            }
+            .navigationTitle("Connections")
+            .toolbar {
+                Toggle(
+                    "Vibrate on Ring",
+                    systemImage: "dot.radiowaves.left.and.right",
+                    isOn: $viewModel.searchModeOn
+                )
+            }
+            .toggleStyle(.switch)
+        }
+        
+    }
+       
 }
 
 #Preview {
-    ConnectionsView()
+    ConnectionsView(userId: "")
 }

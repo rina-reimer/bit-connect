@@ -39,7 +39,8 @@
 		794711652BAFCEEB008DE30D /* SSOLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711642BAFCEEB008DE30D /* SSOLoginView.swift */; };
 		794711672BAFCEF9008DE30D /* PublicConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711662BAFCEF9008DE30D /* PublicConnectionView.swift */; };
 		794711692BAFCF03008DE30D /* BCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711682BAFCF03008DE30D /* BCButton.swift */; };
-		7947116B2BAFCFD0008DE30D /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 7947116A2BAFCFCF008DE30D /* GoogleService-Info (1).plist */; };
+		7947116B2BAFCFD0008DE30D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7947116A2BAFCFCF008DE30D /* GoogleService-Info.plist */; };
+		7947116D2BB09203008DE30D /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947116C2BB09203008DE30D /* MultiSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +93,8 @@
 		794711642BAFCEEB008DE30D /* SSOLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSOLoginView.swift; sourceTree = "<group>"; };
 		794711662BAFCEF9008DE30D /* PublicConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicConnectionView.swift; sourceTree = "<group>"; };
 		794711682BAFCF03008DE30D /* BCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCButton.swift; sourceTree = "<group>"; };
-		7947116A2BAFCFCF008DE30D /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		7947116A2BAFCFCF008DE30D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7947116C2BB09203008DE30D /* MultiSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +185,7 @@
 		794711312BAFCB47008DE30D /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				7947116A2BAFCFCF008DE30D /* GoogleService-Info (1).plist */,
+				7947116A2BAFCFCF008DE30D /* GoogleService-Info.plist */,
 				794711092BAFCB14008DE30D /* Assets.xcassets */,
 				7947112F2BAFCB3E008DE30D /* Extensions.swift */,
 				794711052BAFCB12008DE30D /* BitConnectApp.swift */,
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				794711352BAFCBF1008DE30D /* User.swift */,
+				7947116C2BB09203008DE30D /* MultiSelector.swift */,
 				794711372BAFCC0D008DE30D /* Connection.swift */,
 			);
 			path = Models;
@@ -347,7 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7947110D2BAFCB14008DE30D /* Preview Assets.xcassets in Resources */,
-				7947116B2BAFCFD0008DE30D /* GoogleService-Info (1).plist in Resources */,
+				7947116B2BAFCFD0008DE30D /* GoogleService-Info.plist in Resources */,
 				7947110A2BAFCB14008DE30D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				794711592BAFCDD1008DE30D /* MessagesView.swift in Sources */,
+				7947116D2BB09203008DE30D /* MultiSelector.swift in Sources */,
 				7947114C2BAFCD1F008DE30D /* LoginViewViewModel.swift in Sources */,
 				794711692BAFCF03008DE30D /* BCButton.swift in Sources */,
 				794711652BAFCEEB008DE30D /* SSOLoginView.swift in Sources */,

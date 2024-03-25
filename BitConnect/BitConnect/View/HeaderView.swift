@@ -33,5 +33,5 @@ struct HeaderView: View {
 }
 
 #Preview {
-    HeaderView()
+    HeaderView(title: "Title", subtitle: "Subtitle", background: .pink)
 }

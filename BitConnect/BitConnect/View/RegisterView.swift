@@ -63,6 +63,7 @@ struct RegisterView: View {
                     ) {
                         //Register
                     }
+                    .frame(height:70)
                 }
                 .offset(y: -30)
                 

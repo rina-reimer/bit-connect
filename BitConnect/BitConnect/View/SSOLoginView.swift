@@ -50,12 +50,15 @@ struct SSOLoginView: View {
                         print("Open \(url)")
                         return .handled
                     })
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
                 
                 // sign in button
                 BCButton(title: "Sign In", background: .gray
                 ) {
                     viewModel.register()
                 }
+                .frame(height:70)
                 
                 Spacer()
             }

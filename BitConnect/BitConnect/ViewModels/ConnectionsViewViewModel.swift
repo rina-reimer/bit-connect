@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class ConnectionsViewViewModel: ObservableObject {
+    @Published var searchModeOn = false
+    
+    init() {}
+}
