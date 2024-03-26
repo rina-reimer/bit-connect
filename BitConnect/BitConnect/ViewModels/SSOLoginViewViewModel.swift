@@ -12,7 +12,7 @@ import FirebaseFirestore
 class SSOLoginViewViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
-    var errorMessage = ""
+    @Published var errorMessage = ""
     
     init() {}
     
@@ -36,6 +36,7 @@ class SSOLoginViewViewModel: ObservableObject {
         let newUser = User(id: id,
                            netId: email,
                            email: email+"@uw.edu",
+                           location: Coordinate(latitude: 0.0, longitude: 0.0),
                            joined: Date().timeIntervalSince1970)
         let db = Firestore.firestore()
         db.collection("users")

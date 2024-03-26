@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import SwiftUI
 
 class PublicConnectionViewViewModel: ObservableObject {
     init() {}
+    
+    func toggleChat() {}
 }

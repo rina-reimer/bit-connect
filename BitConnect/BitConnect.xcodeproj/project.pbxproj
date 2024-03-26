@@ -41,6 +41,7 @@
 		794711692BAFCF03008DE30D /* BCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711682BAFCF03008DE30D /* BCButton.swift */; };
 		7947116B2BAFCFD0008DE30D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7947116A2BAFCFCF008DE30D /* GoogleService-Info.plist */; };
 		7947116D2BB09203008DE30D /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947116C2BB09203008DE30D /* MultiSelector.swift */; };
+		79D985D32BB241D8000462B7 /* MultiSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D985D22BB241D8000462B7 /* MultiSelectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		794711682BAFCF03008DE30D /* BCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BCButton.swift; sourceTree = "<group>"; };
 		7947116A2BAFCFCF008DE30D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7947116C2BB09203008DE30D /* MultiSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
+		79D985D22BB241D8000462B7 /* MultiSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 			children = (
 				794711352BAFCBF1008DE30D /* User.swift */,
 				7947116C2BB09203008DE30D /* MultiSelector.swift */,
+				79D985D22BB241D8000462B7 /* MultiSelectorView.swift */,
 				794711372BAFCC0D008DE30D /* Connection.swift */,
 			);
 			path = Models;
@@ -399,6 +402,7 @@
 				794711302BAFCB3E008DE30D /* Extensions.swift in Sources */,
 				7947115F2BAFCEA6008DE30D /* LoginView.swift in Sources */,
 				794711482BAFCCD4008DE30D /* FilterViewViewModel.swift in Sources */,
+				79D985D32BB241D8000462B7 /* MultiSelectorView.swift in Sources */,
 				794711672BAFCEF9008DE30D /* PublicConnectionView.swift in Sources */,
 				794711062BAFCB12008DE30D /* BitConnectApp.swift in Sources */,
 			);

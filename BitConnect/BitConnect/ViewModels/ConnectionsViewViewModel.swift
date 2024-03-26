@@ -8,7 +8,9 @@
 import Foundation
 
 class ConnectionsViewViewModel: ObservableObject {
-    @Published var searchModeOn = false
+    @Published var searchModeOn: Bool = false
+    @Published var showingFilterView: Bool = false
     
     init() {}
 }
+

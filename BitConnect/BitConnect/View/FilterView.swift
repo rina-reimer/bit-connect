@@ -7,59 +7,81 @@
 
 import SwiftUI
 
-struct Pronoun: Identifiable, Hashable {
-    let name: String
-    let id = UUID()
-}
-
-struct PronounSelection: Hashable, Identifiable {
-    var name: String
-    var selection: Set<Pronoun>
-    let id = UUID()
-}
-
-let validPronouns: [Pronoun] = [Pronoun(name: "she/her"),
-                                Pronoun(name: "he/him"),
-                                Pronoun(name: "they/them"),
-                                Pronoun(name: "other")]
-
-
-
 struct FilterView: View {
-    //@State private var pronounSelection = Set<Pronoun>()
-    @State var pronouns = PronounSelection(name: "", selection: [])
+    @StateObject var viewModel = FilterViewViewModel()
+    @Binding var searchModeOn: Bool
     
     var body: some View {
         NavigationView {
             Form {
                 // Pronouns
-                Section(header: Text("Pronouns")) {
+                Section(header: Text("those who use")) {
                     MultiSelector(
-                        label: Text("Serving Goals"),
-                        options: validPronouns,
-                        optionToString: { $0.name },
-                        selected: $pronouns.selection
+                        id: UUID().uuidString,
+                        label: Text("Pronouns"),
+                        options: viewModel.validPronouns,
+                        optionToString: { $0.name! },
+                        selected: $viewModel.pronouns.selection
                     )
-                            }
+                }
                 // School
+                Section(header: Text("those who are in")) {
+                    MultiSelector(
+                        id: UUID().uuidString,
+                        label: Text("School"),
+                        options: viewModel.validSchools,
+                        optionToString: { $0.name! },
+                        selected: $viewModel.schools.selection
+                    )
+                }
                 
                 // Career Path
-                
+                Section(header: Text("those who want to go into")) {
+                    MultiSelector(
+                        id: UUID().uuidString,
+                        label: Text("Career Path"),
+                        options: viewModel.validCareers,
+                        optionToString: { $0.name! },
+                        selected: $viewModel.careers.selection
+                    )
+                }
                 // Interests/Hobbies
-                
+                Section(header: Text("those who are into")) {
+                    MultiSelector(
+                        id: UUID().uuidString,
+                        label: Text("Interests/Hobbies"),
+                        options: viewModel.validInterests,
+                        optionToString: { $0.name! },
+                        selected: $viewModel.interests.selection
+                    )
+                }
+                Section {
+                    // Button
+                    BCButton(title: "Start searching!", background: .green) {
+                        if viewModel.canStart {
+                            viewModel.startSearch()
+                            searchModeOn = false
+                        } else {
+                            viewModel.showAlert = true
+                        }
+                    }
+                }
             }
-            // Pronouns
-            // Text("Connect with people who use the pronouns:")
-            /*List(pronouns, id: \.self, selection: $pronounSelection) {
-                Text($0.name)
-                }*/
-            .navigationTitle("Your Preferences")
-            }
-            // Button
-            Spacer()
+            .navigationTitle("I want to connect with")
+            .alert(isPresented: $viewModel.showAlert, content: {
+                Alert(
+                    title: Text("Error"),
+                    message: Text("Please select at least one item per field.")
+                )
+            })
+        }
     }
 }
 
 #Preview {
-    FilterView()
+    FilterView(searchModeOn: Binding(get: {
+        return true
+    }, set: { _ in
+        
+    }))
 }

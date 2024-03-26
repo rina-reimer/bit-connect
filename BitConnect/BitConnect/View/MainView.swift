@@ -13,25 +13,30 @@ struct MainView: View {
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
             // signed in state
-            TabView {
-                MessagesView()
-                    .tabItem {
-                        Label("Messages", systemImage: "person.bubble")
-                    }
-                
-                ConnectionsView(userId: viewModel.currentUserId)
-                    .tabItem {
-                        Label("Connections", systemImage: "figure.2")
-                        //person.line.dotted.person
-                    }
-                
-                ProfileView()
-                    .tabItem {
-                        Label("Profile", systemImage: "person.circle")
-                    }
-            }
+            accountView
         } else {
             LoginView()
+        }
+    }
+    
+    @ViewBuilder
+    var accountView: some View {
+        TabView {
+            ConnectionsView(userId: viewModel.currentUserId)
+                .tabItem {
+                    Label("Connections", systemImage: "figure.2")
+                    //person.line.dotted.person
+                }
+            
+            MessagesView()
+                .tabItem {
+                    Label("Messages", systemImage: "person.bubble")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
         }
     }
 }
