@@ -29,6 +29,10 @@ struct PublicConnection: Codable, Identifiable {
         isDismissed = state
     }
     
+    mutating func setConnected(_ state: Bool) {
+        isConnected = state
+    }
+    
     enum CodingKeys: String, CodingKey {
         case id
         case user

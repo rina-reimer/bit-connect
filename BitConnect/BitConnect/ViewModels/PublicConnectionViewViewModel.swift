@@ -7,9 +7,25 @@
 
 import Foundation
 import SwiftUI
+import FirebaseFirestore
+import FirebaseAuth
 
 class PublicConnectionViewViewModel: ObservableObject {
     init() {}
     
-    func toggleChat() {}
+    func toggleChat(connection: PublicConnection) {
+        var newConnection = connection
+        newConnection.setConnected(!connection.isConnected!)
+        
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(uid)
+            .collection("currConnections")
+            .document(connection.id!)
+            .setData(newConnection.asDictionary())
+    }
 }

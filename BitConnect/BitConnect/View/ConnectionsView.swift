@@ -9,12 +9,14 @@ import SwiftUI
 import FirebaseFirestoreSwift
 
 struct ConnectionsView: View {
-    @StateObject var viewModel = ConnectionsViewViewModel()
+    @StateObject var viewModel: ConnectionsViewViewModel
     @FirestoreQuery var items: [PublicConnection]
     
     init(userId: String) {
         // data lives at users/id/currConnections/ITEMS
         self._items = FirestoreQuery(collectionPath: "users/\(userId)/currConnections")
+        self._viewModel = StateObject(
+            wrappedValue: ConnectionsViewViewModel(userId: userId))
     }
     
     var body: some View {
@@ -23,12 +25,10 @@ struct ConnectionsView: View {
                 List(items) { item in
                     PublicConnectionView(item: item)
                         .swipeActions {
-                            Button {
-                                // dismiss
-                            } label: {
-                                Text("Dismiss")
-                                    .background(.mint)
+                            Button ("Dismiss") {
+                                viewModel.delete(id: item.id!)
                             }
+                            .tint(.mint)
                         }
                 }
                 .listStyle(PlainListStyle())

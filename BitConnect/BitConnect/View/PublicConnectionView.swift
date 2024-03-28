@@ -47,9 +47,11 @@ struct PublicConnectionView: View {
             }
             Spacer()
             Button {
-                viewModel.toggleChat()
+                viewModel.toggleChat(connection: item)
             } label: {
-                Image(systemName: item.isConnected! ? "message.circle" : "circle")
+                Image(systemName: item.isConnected! ? 
+                    "message.circle" : "circle")
+                .foregroundColor(.mint)
             }
         }
     }
