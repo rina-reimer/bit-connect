@@ -10,7 +10,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ProfileViewViewModel: ObservableObject {
-    @Published var user: User? = nil
+    @Published var user: Student? = nil
     
     init() {
     }
@@ -19,6 +19,7 @@ class ProfileViewViewModel: ObservableObject {
         guard let userId = Auth.auth().currentUser?.uid else {
             return
         }
+        
         let db = Firestore.firestore()
         db.collection("users").document(userId).getDocument { [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else {
@@ -26,11 +27,8 @@ class ProfileViewViewModel: ObservableObject {
             }
             
             DispatchQueue.main.async {
-                self?.user = User(id: data["id"] as? String ?? "",
-                                  netId: data["netId"] as? String ?? "",
-                                  email: data["email"] as? String ?? "",
-                                  location: data["id"] as? Coordinate ?? Coordinate(latitude: 0.0, longitude: 0.0),
-                                  joined: data["id"] as? TimeInterval ?? 0)
+                self?.user = Student(id: data["id"] as? String ?? "",
+                                  netId: data["netId"] as? String ?? "")
             }
         }
     }

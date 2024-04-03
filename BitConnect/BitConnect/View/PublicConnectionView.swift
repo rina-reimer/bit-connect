@@ -20,25 +20,25 @@ struct PublicConnectionView: View {
                 let interests = item.filter!["interestSelection"]
                 
                 Text("Pronouns").bold()
-                ForEach(pronouns!.sorted{$0.id! < $1.id!}) { item in
+                ForEach(pronouns!.sorted{$0.id < $1.id}) { item in
                     Text(item.name!)
                         .font(.footnote)
                 }
                 
                 Text("Schools").bold()
-                ForEach(schools!.sorted{$0.id! < $1.id!}) { item in
+                ForEach(schools!.sorted{$0.id < $1.id}) { item in
                     Text(item.name!)
                         .font(.footnote)
                 }
                 
                 Text("Career Paths").bold()
-                ForEach(careers!.sorted{$0.id! < $1.id!}) { item in
+                ForEach(careers!.sorted{$0.id < $1.id}) { item in
                     Text(item.name!)
                         .font(.footnote)
                 }
                 
                 Text("Interests").bold()
-                ForEach(interests!.sorted{$0.id! < $1.id!}) { item in
+                ForEach(interests!.sorted{$0.id < $1.id}) { item in
                     Text(item.name!)
                         .font(.footnote)
                 }
@@ -49,7 +49,7 @@ struct PublicConnectionView: View {
             Button {
                 viewModel.toggleChat(connection: item)
             } label: {
-                Image(systemName: item.isConnected! ? 
+                Image(systemName: item.isConnected ?? false ?
                     "message.circle" : "circle")
                 .foregroundColor(.mint)
             }

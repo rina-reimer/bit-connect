@@ -6,31 +6,6 @@
 
 import SwiftUI
 
-struct Option: Identifiable, Hashable, Codable, Equatable {
-    let name: String?
-    let id: String?
-    
-    init(name: String) {
-        self.name = name
-        self.id = UUID().uuidString
-    }
-    
-    enum CodingKeys: CodingKey {
-        case name
-        case id
-    }
-}
-
-struct Selection: Hashable, Identifiable {
-    var name: String
-    var selection: Set<Option>
-    let id = UUID()
-    
-    func getSelect() -> Set<Option> {
-        return selection
-    }
-}
-
 struct MultiSelector<LabelView: Equatable & View, Option: Identifiable & Hashable>: Hashable, Identifiable, View {
     static func == (lhs: MultiSelector<LabelView, Option>, rhs: MultiSelector<LabelView, Option>) -> Bool {
         return lhs.id == rhs.id && lhs.label == rhs.label && lhs.options == rhs.options

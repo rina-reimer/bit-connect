@@ -15,7 +15,7 @@ class PublicConnectionViewViewModel: ObservableObject {
     
     func toggleChat(connection: PublicConnection) {
         var newConnection = connection
-        newConnection.setConnected(!connection.isConnected!)
+        newConnection.setConnected(true)
         
         guard let uid = Auth.auth().currentUser?.uid else {
             return
@@ -25,7 +25,7 @@ class PublicConnectionViewViewModel: ObservableObject {
         db.collection("users")
             .document(uid)
             .collection("currConnections")
-            .document(connection.id!)
+            .document(connection.id ?? "")
             .setData(newConnection.asDictionary())
     }
 }

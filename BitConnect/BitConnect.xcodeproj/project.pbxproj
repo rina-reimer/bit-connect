@@ -15,7 +15,7 @@
 		794711212BAFCB14008DE30D /* BitConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711202BAFCB14008DE30D /* BitConnectUITests.swift */; };
 		794711232BAFCB14008DE30D /* BitConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711222BAFCB14008DE30D /* BitConnectUITestsLaunchTests.swift */; };
 		794711302BAFCB3E008DE30D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947112F2BAFCB3E008DE30D /* Extensions.swift */; };
-		794711362BAFCBF1008DE30D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711352BAFCBF1008DE30D /* User.swift */; };
+		794711362BAFCBF1008DE30D /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711352BAFCBF1008DE30D /* Student.swift */; };
 		794711382BAFCC0D008DE30D /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794711372BAFCC0D008DE30D /* Connection.swift */; };
 		7947113B2BAFCC35008DE30D /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7947113A2BAFCC35008DE30D /* MainViewViewModel.swift */; };
 		7947113E2BAFCC75008DE30D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7947113D2BAFCC75008DE30D /* FirebaseAuth */; };
@@ -73,7 +73,7 @@
 		794711202BAFCB14008DE30D /* BitConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitConnectUITests.swift; sourceTree = "<group>"; };
 		794711222BAFCB14008DE30D /* BitConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7947112F2BAFCB3E008DE30D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		794711352BAFCBF1008DE30D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		794711352BAFCBF1008DE30D /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		794711372BAFCC0D008DE30D /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		7947113A2BAFCC35008DE30D /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		794711432BAFCCB2008DE30D /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 		794711342BAFCBE6008DE30D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				794711352BAFCBF1008DE30D /* User.swift */,
+				794711352BAFCBF1008DE30D /* Student.swift */,
 				7947116C2BB09203008DE30D /* MultiSelector.swift */,
 				79D985D22BB241D8000462B7 /* MultiSelectorView.swift */,
 				794711372BAFCC0D008DE30D /* Connection.swift */,
@@ -384,7 +384,7 @@
 				7947114C2BAFCD1F008DE30D /* LoginViewViewModel.swift in Sources */,
 				794711692BAFCF03008DE30D /* BCButton.swift in Sources */,
 				794711652BAFCEEB008DE30D /* SSOLoginView.swift in Sources */,
-				794711362BAFCBF1008DE30D /* User.swift in Sources */,
+				794711362BAFCBF1008DE30D /* Student.swift in Sources */,
 				794711632BAFCEDC008DE30D /* RegisterView.swift in Sources */,
 				794711082BAFCB12008DE30D /* MainView.swift in Sources */,
 				7947114E2BAFCD2A008DE30D /* SSOLoginViewViewModel.swift in Sources */,
@@ -568,13 +568,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BitConnect/Preview Content\"";
+				DEVELOPMENT_TEAM = V5F2F8JNZD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bit Connect";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,13 +597,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BitConnect/Preview Content\"";
+				DEVELOPMENT_TEAM = V5F2F8JNZD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bit Connect";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

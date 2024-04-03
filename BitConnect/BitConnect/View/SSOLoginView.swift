@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SSOLoginView: View {
-    @State var viewModel = SSOLoginViewViewModel()
+    @StateObject var viewModel = SSOLoginViewViewModel()
     
     var body: some View {
         NavigationView {

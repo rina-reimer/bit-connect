@@ -58,5 +58,5 @@ struct ConnectionsView: View {
        
 
 #Preview {
-    ConnectionsView(userId: "Ak2FASx2gKdtQLEeSgyrScAzChA3")
+    ConnectionsView(userId: "Hkm8OpM9dUOmAnhF8APlX4rguC43")
 }

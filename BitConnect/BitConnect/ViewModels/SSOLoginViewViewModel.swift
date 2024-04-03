@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseCore
 import FirebaseAuth
 import FirebaseFirestore
 
@@ -17,28 +18,24 @@ class SSOLoginViewViewModel: ObservableObject {
     init() {}
     
     func register() {
-
         guard validate() else {
             return
         }
         
-        Auth.auth().createUser(withEmail: email+"@uw.edu", password: password) { [weak self] result, error in
+        Auth.auth().createUser(withEmail: email+"@uw.edu", password: password) { result, error  in
             guard let userId = result?.user.uid else {
                 return
             }
             
-            self?.insertUserRecord(id: userId)
+            self.insertUserRecord(id: userId)
         }
         
     }
     
     private func insertUserRecord(id: String) {
-        let newUser = User(id: id,
-                           netId: email,
-                           email: email+"@uw.edu",
-                           location: Coordinate(latitude: 0.0, longitude: 0.0),
-                           joined: Date().timeIntervalSince1970)
+        let newUser = Student(id: id, netId: email)
         let db = Firestore.firestore()
+        
         db.collection("users")
             .document(id)
             .setData(newUser.asDictionary())

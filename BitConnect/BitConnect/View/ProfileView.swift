@@ -35,7 +35,7 @@ struct ProfileView: View {
                         HStack {
                             Text("Member Since: ")
                                 .bold()
-                            Text(user.id)
+                                Text(user.id)
                         }
                     }
                     .padding()
@@ -53,7 +53,7 @@ struct ProfileView: View {
             }
             .navigationTitle("Profile")
         }
-        .onAppear{ viewModel.fetchUser() }
+        //.onAppear{ viewModel.fetchUser() }
     }
 }
 
